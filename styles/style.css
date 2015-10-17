@@ -1,0 +1,340 @@
+* {
+    box-sizing: border-box;
+}
+
+html,body{
+	height:100%;
+	margin:0;
+	padding:0;
+	font-family: "Lucida Sans", sans-serif;
+	color:#333131;
+	font-size:0.95em;
+}
+
+.row {
+	background: url('../images/windsurf4.jpg') no-repeat top center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	min-height: 77%; 
+	padding:3%;
+}
+.row:after {
+	content: "";
+    clear: both;
+    display: block;
+}
+
+.header {
+    background-color: #141311;
+    color: #ffffff;
+	}
+
+ul#menu {
+	float:right;
+	margin:20px;
+	}
+
+ul#menu li {
+	display:inline;
+	background-color :#33b5e5;
+	padding: 8px;
+	margin-left:12px;
+	margin-bottom: 7px;
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+ul#menu li a {
+	text-decoration:none;
+	color:#FFF;
+	font-size:12px;
+	font-weight:bold;
+	text-transform:uppercase;
+	width: 100%;
+	height: 100%;
+	padding:3px;
+}
+ul#menu li a.active, ul#menu li a:hover {
+}
+
+ul#menu li:hover {
+	transition: all .5s ease-out;
+	transform:scale(1.15);
+}
+
+#content{
+	
+}
+
+#pageContent {
+	padding:40px;
+	/* background: rgba(255, 255, 255, .9); */
+	background:#fff;
+}
+
+.aside {
+    background-color: #33b5e5;
+    padding: 15px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+#footer {
+	background-color:#141311;
+    font-size: 12px;
+    padding: 15px;
+	color:#ffffff;
+}
+
+#footer_column {
+    float:left;
+    margin-right:30px;
+}
+
+.footer_column ul li, .footer_column ul {
+    list-style:none;
+    margin:0px;
+    padding:0px;
+}
+
+#footer a {
+	color:#33b5e5;
+}
+
+/* Page navigation */
+/************************************/
+
+/* Responsive layout */
+/* For desktop: */
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+@media only screen and (max-width: 768px) {
+
+    [class*="col-"] {
+        width: 100%;
+    }
+	
+	#header {
+		width:100%;
+		padding:3%;
+	}
+	
+	ul#menu {
+		float:left;
+		padding:15px;
+		width: 90%;
+	}
+	
+	ul#menu li {
+		display:block;
+	}
+	
+	ul#menu li a {
+		display: block;
+		width: 100%;
+		height: 100%;
+		padding:3px;
+  }
+  
+	ul#menu li:hover {
+		transform:scale(1.05);
+	}
+}
+
+/*responsive layout
+/************************************/
+
+@media only screen and (max-width: 320px) {
+	
+	.row {
+	background: none;
+	}
+	
+	#pageContent {
+		padding:5px;
+		text-align:justify;
+	}
+	
+	
+	#menu {
+		padding:0;
+		
+	}
+	
+	ul#menu  {
+		padding:0;
+		width: 82%;
+	}
+		
+}
+
+.hide {
+	display: none; 
+	overflow: hidden;
+}
+
+
+.current, .no-js  {
+  display: block;
+  z-index: 1;
+}
+
+
+ /* Keyframes - animacja przejsc pomiedzy stronami
+/*************************************************/
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+ .fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+} 
+
+#canvas {
+	width:700px;
+	height:600px;
+	border: 1px solid #ccc;
+	overflow:hidden;
+}
+
+/* lista numerowana do drag and drop */
+/************************************/
+
+#listmenu li {
+  display: block;
+  background-color: #33b5e5;
+  padding: 8px;
+  margin-left: 12px;
+  margin-bottom: 20px;
+  width: 200px;
+  height:30px;
+  z-index: 2;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+#listmenu li.placeholder {
+  background-color: #c1c1c1;
+  color:#c1c1c1;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.12), inset 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+#listmenu a {
+  color:white;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+#listmenu li.placeholder a {
+  color:#c1c1c1;
+  font-weight:bold;
+  text-decoration:none;
+}
+  
+#listmenu {
+  position:relative;
+  background-color: #ccc;
+  padding: 60px;
+}
+
+
+/* tabela z zakladki equipment */
+/************************************/
+.table-bordered {
+  border-width: 1px 1px 1px 0px;
+  border-style: solid solid solid none;
+  border-color: #DDD #DDD #DDD -moz-use-text-color;
+  -moz-border-top-colors: none;
+  -moz-border-right-colors: none;
+  -moz-border-bottom-colors: none;
+  -moz-border-left-colors: none;
+  border-image: none;
+  border-collapse: collapse;
+  border-radius: 4px;
+}
+
+.table-bordered th,
+.table-bordered td {
+  min-height:35px;
+  padding: 8px;
+  line-height: 20px;
+  text-align: left;
+  vertical-align: top;
+  border: 1px solid #DDD;
+  background-color:#fff;
+
+}
+
+.table-bordered th{
+  background-color: #0078e7;
+  color: #ffffff;
+}
+
+#panel {
+	margin-bottom:5em;
+}
+
+td.delete_row {
+  text-align: center;
+}
+
+.delete_row:hover {
+  color: red;
+  cursor:pointer;
+}
+
+/* Ukrywanie i pokazywanie calosci tekstu */
+/******************************************/
+
+.hideContent {
+    overflow: hidden;
+    height: 2.4em;
+}
+
+.showContent {
+    height: auto;
+}
+
+
+
+
+
+

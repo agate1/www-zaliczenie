@@ -1,0 +1,118 @@
+<div id="pageContent" class="fadeIn">
+<h1>Form with validation</h1>
+<p>Formularz zawiera walidacje html5 + wyrazenia regularne oraz walidacje jQuery. Za pomoca linka Add www mozna dodawac / usuwac nowe elementy - pola zawierajace adresy stron internetowych uzytkownika.</p>
+
+<p>Quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint   occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<form class="pure" id="contactForm" >
+				<fieldset class="contact">
+					<legend>User Credentials</legend>
+					<p>
+						<label for="username">Username</label>
+						<input id="username" type="text" minlength="2" placeholder="Username" required>
+					</p>
+
+					<p>
+						<label for="password">Password</label>
+						<input id="password" name="password" type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" minlength="5"  placeholder="Password" required>
+					</p>
+					<p>
+						<label for="confirm_password">Confirm password</label>
+						<input id="confirm_password" name="confirm_password" minlength="5" type="password"  placeholder="Confirm password" required>
+					</p>
+					<div id="kontener">
+					<p id="wiersz1">
+						<label for="www"><a href="#" onclick="addFavourite()">Add www</a></label>
+						<input id="www" type="url"  placeholder="http://www.page.pl">
+					</p>
+					</div>
+				</fieldset>
+				<fieldset class="contact">
+					<legend>User Details</legend>
+					<p>
+						<label for="firstname">Firstname</label>
+						<input id="firstname" name="firstname" minlength="2" type="text"  placeholder="First name" required>
+					</p>
+					<p>
+						<label for="lastname">Lastname</label>
+						<input id="lastname" name="lastname" minlength="2" type="text"  placeholder="Last name" required>
+					</p>
+					<p>
+						<label for="phone">Phone</label>
+						<input id="phone" name="phone" type="phone" placeholder="48000000000" required>
+					</p>
+					<div class="pure-control-group">
+						<label for="email">Email Address</label>
+						<input id="email" name="email" type="email" pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" placeholder="Email Address" required>
+					</p>
+					<p>
+						<label for="zip">Postal Code</label>
+						<input id="zip" type="zip" pattern="^\d{2}-\d{3}" placeholder="00-000">
+					</p>
+					<p>
+						<label for="city">City</label>
+						<input id="city" type="text"  placeholder="City">
+					</p>
+					<p>
+						<label for="state">Country</label>
+						<select id="state">
+							<option>Poland</option>
+							<option>Great Britain</option>
+							<option>France</option>
+						</select>
+					</p>
+				</fieldset>
+				<fieldset class="contact">
+					<legend>Date of birth</legend>
+					<p>
+						<label for="day">Day</label>
+						<select id="day"></select>
+					</p>
+					<p>
+						<label for="day">Month</label>
+						<select id="month" >
+							<option value="1">January</option><option value="2">February</option><option value="3">March</option><option value="4">April</option><option value="5">May</option><option value="6">June</option><option value="7">July</option><option value="8">August</option><option value="9">September</option><option value="10">October</option><option value="11">November</option><option value="12">December</option>
+						</select>
+					</p>
+					<p>
+						<label for="day">Year</label>
+						<select id="year" ></select>
+					</p>
+				</fieldset>
+				<fieldset class="contact">
+					<p>
+						<input id="option-two" type="radio" name="optionsRadios" value="option1" checked>
+						<label for="option-one" class="pure-radio">Choice 1</label>
+					</p>
+					<p>						
+						<input id="option-three" type="radio" name="optionsRadios" value="option2">
+						<label for="option-two" class="pure-radio">Choice 2</label>
+					</p>
+				</fieldset>
+				<fieldset class="contact">
+					<legend>Comments</legend>
+					<p>
+						<label for="title"></label>
+						<input type="text" id="title" placeholder="Title">
+					</p>
+					<p>
+						<label for="comment"></label>
+						<textarea id="comment" placeholder="Your comment here"></textarea>
+					</p>
+				</fieldset>
+				<fieldset class="contact">
+					<p id="condition">
+						<label for="terms">Ive read the terms and conditions</label>
+						<input id="terms" name="terms" type="checkbox">
+		
+					</p>
+					<p>
+						<input class="submit" type="submit" value="Submit">
+					</p>
+				</fieldset>
+			</form>
+			<script>
+				$(document).ready(validateForm()); 
+			</script>
+			
+</div>

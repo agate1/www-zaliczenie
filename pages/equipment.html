@@ -1,0 +1,44 @@
+<div id="pageContent" class="fadeIn">
+<h1>Dynamic table</h1>
+<p>Tabelka, której wiersze można dynamicznie edytować, dodawać oraz usuwać</p>
+
+<p>Kliknij na tekst w tabeli, aby go edytowac. Zeby usunac wiersz nalezy kliknac na znak "x" w kolumnie "Delete row". Dodawanie wierszy do tabeli poprzez klikniecie guzika ze znakiem plus.</p>
+
+<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+    <table id="myTable" class="table-bordered">
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Equipment</th>
+      <th>Price</th>
+	  <th>Delete row</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>12412-oi/76</td>
+      <td>Sail 4m - model 4589</td>
+      <td>55.64</td>
+	  <td class="delete_row">x</td>
+    </tr>
+    <tr>
+      <td>653</td>
+      <td>Mast - id 76</td>
+      <td>132.00</td>
+	  <td class="delete_row">x</td>
+    </tr>
+    <tr>
+      <td>245624</td>
+      <td>Sail 3.5m</td>
+      <td>734.88</td>
+	  <td class="delete_row">x</td>
+    </tr>
+  </tbody>
+</table>
+
+<div id="panel">
+	<button id="add_row" onclick="newRow()"> + </button>
+</div>
+</div>
+
